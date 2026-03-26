@@ -22,7 +22,7 @@ public class OxygenController {
         if (spo2 < MIN_SPO2 || spo2 > MAX_SPO2) {
             throw new IllegalArgumentException("Nồng độ SpO2 ngoài dải cho phép [70-100]: " + spo2);
         }
-        // 2. Logic điều tiết
+
         if (spo2 >= SAFE_SPO2_THRESHOLD) {
             return BASE_OXYGEN_FLOW;
         } else {
